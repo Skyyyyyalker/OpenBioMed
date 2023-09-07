@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 import torch
 from torch_geometric.data import Data, Batch
 from transformers import BatchEncoding, DataCollatorWithPadding, BertTokenizer, T5Tokenizer, GPT2Tokenizer, EsmTokenizer
-from utils.mol_utils import SmilesTokenizer
+from .mol_utils import SmilesTokenizer
 
 name2tokenizer = {
     "bert": BertTokenizer,

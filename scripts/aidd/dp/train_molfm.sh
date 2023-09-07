@@ -4,7 +4,7 @@ DEVICE=$1
 
 mkdir ./ckpts/finetune_ckpts/dp
 
-python tasks/mol_task/dp.py \
+python open_biomed/tasks/mol_task/dp.py \
 --device cuda:$DEVICE \
 --dataset MoleculeNet \
 --dataset_path ./datasets/dp/moleculenet \

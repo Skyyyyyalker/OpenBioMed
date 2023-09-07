@@ -8,13 +8,13 @@ import torch
 
 import datetime
 
-from utils.distributed_utils import *
-from utils.metrics import *
-from utils.mol_utils import *
-from utils.cell_utils import *
-from utils.kg_utils import *
-from utils.matrix_utils import *
-from utils.collators import *
+from .distributed_utils import *
+from .metrics import *
+from .mol_utils import *
+from .cell_utils import *
+from .kg_utils import *
+from .matrix_utils import *
+from .collators import *
 
 class BestMeter(object):
     """Computes and stores the best value"""

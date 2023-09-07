@@ -68,6 +68,7 @@ def generate_scaffolds(dataset, log_every_n=1000, sort=True, is_standard=False):
     """
     return scaffold_sets
 
+# 返回三个列表，分别是 scaffold split 之后得到的 train_indexs, valid_indexs, test_indexs
 def scaffold_split(dataset, r_val, r_test, log_every_n=1000, is_standard=False):
     r_train = 1.0 - r_val - r_test
     scaffold_sets = generate_scaffolds(dataset, log_every_n, is_standard=is_standard)

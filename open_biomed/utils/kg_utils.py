@@ -13,7 +13,7 @@ import torch
 
 from rdkit import Chem
 
-from utils.cell_utils import load_hugo2ncbi
+from .cell_utils import load_hugo2ncbi
 
 class KG(object):
     def  __init__(self):
@@ -148,7 +148,7 @@ class STRING(KG):
     def __str__(self):
         return "Collected from string v11.0 database, totally %d proteins and %d edges" % (len(self.proteins), len(self.edges))
 
-SUPPORTED_KG = {"BMKG": BMKG, "STRING": STRING}
+SUPPORTED_KG = {"BMKGV2": BMKG, "STRING": STRING}
 
 def subgraph_sample(num_nodes, edge_index, strategy, num_samples, directed=False):
     ### Inputs:

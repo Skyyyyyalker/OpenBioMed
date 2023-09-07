@@ -208,8 +208,8 @@ def val_dp(val_loader, model, task, args):
 def main(args, config):
     # prepare dataset
 
-    dataset = SUPPORTED_DP_DATASETS[args.dataset](
-        args.dataset_path, config["data"], args.dataset_name, 2)
+    dataset = SUPPORTED_DP_DATASETS[args.dataset](  # 创建 MoleculeNetDataset 类
+        args.dataset_path, config["data"], args.dataset_name, 2)    # 默认为 BBBP
     task = dataset.task
 
     train_dataset = dataset.index_select(dataset.train_index)
